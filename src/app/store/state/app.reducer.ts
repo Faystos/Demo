@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import {IUser} from "../../types/user.type";
-import {fetchUserList, fetchUserListError, fetchUserListSuccess} from "./app.action";
+import {addNewUser, fetchUserList, fetchUserListError, fetchUserListSuccess} from "./app.action";
 
 export interface State {
   userList: IUser[] | [];
@@ -39,6 +39,15 @@ export const reducer = createReducer(
       userList: [],
       userListLoading: false,
       userListError: httpErrorResponse
+    })
+  ),
+  on(
+    addNewUser,
+    (state: State, { newUser }): State => ({
+      ...state,
+      userList: [...state.userList, newUser],
+      userListLoading: false,
+      userListError: undefined
     })
   )
 )

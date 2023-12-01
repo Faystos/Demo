@@ -1,5 +1,5 @@
 <div class="container">
-  <table mat-table *ngIf="userList$ | async; let users" [dataSource]="users" class="mat-elevation-z8">
+  <table mat-table  [dataSource]="paginationUserList" class="mat-elevation-z8">
     <ng-container matColumnDef="select">
       <th mat-header-cell *matHeaderCellDef class="no-border">
 
@@ -20,7 +20,7 @@
 
     <ng-container matColumnDef="dateRegistration">
       <th mat-header-cell *matHeaderCellDef> Дата регистрации </th>
-      <td mat-cell *matCellDef="let element"> {{element.dateRegistration}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.dateRegistration | date : 'dd.MM.YYYY'}} </td>
     </ng-container>
 
     <ng-container matColumnDef="fullName">
@@ -57,6 +57,14 @@
 </div>
 
 <div class="container container_right container_margin-top-16">
+  <mat-paginator [length]="userList.length"
+                 [pageSize]="5"
+                 [pageSizeOptions]="[5]"
+                 (page)="handlePageEvent($event)"
+                 aria-label="Select page"
+  >
+  </mat-paginator>
+
   <button mat-flat-button color="primary" (click)="onAddUser()">
     Добавить пользоваметля
   </button>

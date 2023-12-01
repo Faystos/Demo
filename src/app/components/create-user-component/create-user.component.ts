@@ -30,7 +30,8 @@ export class CreateUserComponent implements OnInit {
 
   onSubmit() {
     if (this.addUserForm.status === "INVALID") return;
-    this.dialogRef.close({ ...this.addUserForm.value as IUser });
+    const newUser: IUser = {...this.addUserForm.value as IUser, id: this.getRandomInt(8, 100).toString(), }
+    this.dialogRef.close(newUser);
   }
 
   private initFormAddUser() {
@@ -40,7 +41,13 @@ export class CreateUserComponent implements OnInit {
       post: new FormControl<string>('', [Validators.required]),
       email: new FormControl<string>('', [Validators.required]),
       password: new FormControl<string>('', [Validators.required, Validators.minLength(8)]),
-      tel: new FormControl<string>('', [Validators.required])
+      tel: new FormControl<string>('+7', [Validators.required])
     });
   }
+
+  private getRandomInt (min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+
+}
+
 }

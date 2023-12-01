@@ -16,3 +16,8 @@ export const fetchUserListError = createAction(
   actionType.fetchUserListError,
   props<{ httpErrorResponse: unknown }>()
 );
+
+export const addNewUser = createAction(
+  actionType.addNewUser,
+  props<{ newUser: IUser }>()
+);

@@ -1,7 +1,8 @@
 import {Injectable} from "@angular/core";
 import {Store} from "@ngrx/store";
 import {userList} from "./app.selector";
-import {fetchUserList} from "./app.action";
+import {addNewUser, fetchUserList} from "./app.action";
+import {IUser} from "../../types/user.type";
 
 @Injectable({providedIn: "root"})
 export class AppFacadeService {
@@ -11,6 +12,10 @@ export class AppFacadeService {
 
   fetchUserList() {
     this.store.dispatch(fetchUserList());
+  }
+
+  addNewUser(newUser: IUser) {
+    this.store.dispatch(addNewUser({ newUser }))
   }
 
 

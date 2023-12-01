@@ -15,7 +15,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import {MatNativeDateModule, MAT_DATE_LOCALE} from "@angular/material/core";
+import { MatNativeDateModule, MAT_DATE_LOCALE } from "@angular/material/core";
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { InfoComponent } from "./components/info-component/info.component";
 import { LoadUserComponent } from "./components/load-user-component/load-user.component";
@@ -47,6 +48,7 @@ import {AppEffect} from "./store/state/app.effect";
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatPaginatorModule,
     StoreModule.forRoot({'app-store': reducer}),
     EffectsModule.forRoot([AppEffect]),
   ],

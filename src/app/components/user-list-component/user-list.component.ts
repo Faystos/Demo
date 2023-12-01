@@ -1,36 +1,37 @@
-import { Component } from "@angular/core";
-import { map } from "rxjs";
+import {Component, OnInit} from "@angular/core";
 
 import { SelectionModel } from "@angular/cdk/collections";
 import { MatDialog } from "@angular/material/dialog";
 
 import { CreateUserComponent } from "../create-user-component/create-user.component";
-import { UserHttpService } from "../../services/user.http.service";
 import { IUser } from "../../types/user.type";
+import { AppFacadeService } from "../../store/state/app.facade.service";
+
 
 @Component({
   selector: 'user-list',
   templateUrl: 'user-list.component.html',
   styleUrls: ['user-list.component.scss']
 })
-export class UserListComponent {
+export class UserListComponent implements OnInit {
   displayedColumns: string[] = ['select', 'id', 'dateRegistration', 'fullName', 'post', 'email', 'password', 'tel'];
 
   selection = new SelectionModel<IUser>(true, []);
-  userList$ = this.userHttpService.fetchUserList().pipe(
-    map((list) => list.users)
-  );
+  userList$ = this.appFacade.userList$;
 
   constructor(
-    private userHttpService: UserHttpService,
+    private appFacade: AppFacadeService,
     public dialog: MatDialog
   ) {}
+
+  ngOnInit() {
+    this.appFacade.fetchUserList();
+  }
 
   onAddUser():void {
     const dialogRef = this.dialog.open(CreateUserComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       console.log(result);
     });
   }

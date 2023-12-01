@@ -1,0 +1,27 @@
+.nav {
+  width: 80%;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin: 20px auto 0;
+
+  .active-link {
+    position: relative;
+    color: darkslateblue;
+    border-bottom: 2px solid darkslateblue;
+    border-radius: initial;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-top: 1.8px solid darkslateblue;
+      border-right: 1.8px solid darkslateblue;
+      transform: rotate(133deg) translateX(-50%);
+      top: 50%;
+      right: 5px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "dateRegistration": "01.01.2020",
+      "fullName": "Пирагов Иван Иваныч",
+      "post": "Важная должность",
+      "email": "email@email.ru",
+      "password": "********",
+      "tel": "+7 777 *** ** **"
+    },
+    { "id": "2", "dateRegistration": "01.01.2020", "fullName": "Пирагов Иван Иваныч", "post": "Важная должность", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "3", "dateRegistration": "01.01.2020", "fullName": "Пирагов Иван Иваныч", "post": "Важная должность", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "4", "dateRegistration": "01.01.2020", "fullName": "Пирагов Иван Иваныч", "post": "Важная должность", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "5", "dateRegistration": "01.01.2020", "fullName": "Пирагов Иван Иваныч", "post": "Важная должность", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "6", "dateRegistration": "01.01.2020", "fullName": "Пирагов Иван Иваныч", "post": "Важная должность", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "7", "dateRegistration": "01.01.2020", "fullName": "Пирагов Иван Иваныч", "post": "Важная должность", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" }
+  ]
+}

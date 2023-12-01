@@ -1,0 +1,55 @@
+<ng-container>
+  <h2 mat-dialog-title>Добавление данных об экспертах по оценке и руководителей</h2>
+  <mat-dialog-content class="mat-typography">
+    <form class="form" [formGroup]="addUserForm" (submit)="onSubmit()">
+      <div class="field-container">
+        <mat-label>Дата регистрации</mat-label>
+        <mat-form-field class="example-form-field" appearance="fill">
+          <input matInput [matDatepicker]="picker" formControlName="dateRegistration">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker touchUi #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="field-container">
+      <mat-label>ФИО</mat-label>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput type="text" formControlName="fullName">
+      </mat-form-field>
+    </div>
+
+    <div class="field-container">
+      <mat-label>Должность</mat-label>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput type="text" formControlName="post">
+      </mat-form-field>
+    </div>
+
+    <div class="field-container">
+      <mat-label>Почта(Логин)</mat-label>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input type="email" matInput formControlName="email">
+      </mat-form-field>
+    </div>
+
+    <div class="field-container">
+      <mat-label>Пароль</mat-label>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput type="password" formControlName="password">
+      </mat-form-field>
+    </div>
+
+    <div class="field-container">
+      <mat-label>Телефон, привязанный к мессенджеру</mat-label>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <span matPrefix>+7 &nbsp;</span>
+        <input type="tel" matInput formControlName="tel">
+      </mat-form-field>
+    </div>
+
+      <div class="form-action form__margin-top-12">
+        <button type="submit"  mat-flat-button color="primary">Сохранить</button>
+      </div>
+  </form>
+  </mat-dialog-content>
+</ng-container>

@@ -1,0 +1,32 @@
+{
+  "users": [
+    { "id": "1", "dateRegistration": "01.01.2007", "fullName": "Розанова София Романовна", "post": "Администратор гостиницы", "email": "bettoussubrugre-9459@yopmail.com", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "2", "dateRegistration": "01.01.2006", "fullName": "Гуляев Алексей Дмитриевич", "post": "Системный администратор", "email": "lexajetreque-4560@yopmail.com", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "3", "dateRegistration": "01.01.2005", "fullName": "Фирсова Вероника Эмировна", "post": "Энергетик", "email": "jeiweyokenu-8477@yopmail.com", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "4", "dateRegistration": "01.01.2004", "fullName": "Черкасов Павел Павлович", "post": "Микробиолог", "email": "loubrelagropre-8396@yopmail.com", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "5", "dateRegistration": "01.01.2003", "fullName": "Алексеев Алексей Миронович", "post": "Часовщик", "email": "budeussaboifou-9497@yopmail.com", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "6", "dateRegistration": "01.01.2002", "fullName": "Соловьева Анастасия Богдановна", "post": "Циркач", "email": "tafutakeibou-2120@yopmail.com", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "7", "dateRegistration": "01.01.2001", "fullName": "Румянцева Софья Константиновна", "post": "Продавец", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "8", "dateRegistration": "01.01.2000", "fullName": "Попова Ксения Владимировна", "post": "Лингвист", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "9", "dateRegistration": "01.01.1999", "fullName": "Громова Алиса Макаровна", "post": "Комбайнер", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "10", "dateRegistration": "01.01.1998", "fullName": "Плотникова Софья Матвеевна", "post": "Дворник", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "11", "dateRegistration": "01.01.1997", "fullName": "Волошина Вероника Романовна", "post": "Сметчик", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "12", "dateRegistration": "01.01.1996", "fullName": "Федорова Вера Михайловна", "post": "Сварщик", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "13", "dateRegistration": "01.01.1995", "fullName": "Молчанов Фёдор Артёмович", "post": "Травматолог", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "14", "dateRegistration": "01.01.1994", "fullName": "Яковлев Павел Алексеевич", "post": "Блогер", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "15", "dateRegistration": "01.01.1993", "fullName": "Соловьев Дмитрий Петрович", "post": "Финансист", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "16", "dateRegistration": "01.01.1992", "fullName": "Кулешова Ева Максимовна", "post": "Упаковщик", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "17", "dateRegistration": "01.01.1991", "fullName": "Попов Андрей Владиславович", "post": "Продавец", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "18", "dateRegistration": "01.01.1990", "fullName": "Чеснокова Софья Данииловна", "post": "Стрелочник", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "19", "dateRegistration": "01.01.1989", "fullName": "Казакова Ева Вячеславовна", "post": "Циркач", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "20", "dateRegistration": "01.01.1988", "fullName": "Антонов Михаил Максимович", "post": "Вирусолог", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "21", "dateRegistration": "01.01.1987", "fullName": "Никитина Елизавета Романовна", "post": "Кинорежиссер", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "22", "dateRegistration": "01.01.1986", "fullName": "Спиридонов Тимофей Николаевич", "post": "Бренд-менеджер", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "23", "dateRegistration": "01.01.1985", "fullName": "Фетисова Алина Платоновна", "post": "Циркач", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "24", "dateRegistration": "01.01.1984", "fullName": "Дьякова Юлия Демидовна", "post": "Лаборант", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "25", "dateRegistration": "01.01.1983", "fullName": "Козлов Ярослав Михайлович", "post": "Юрист", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "26", "dateRegistration": "01.01.1982", "fullName": "Новикова Станислава Романовна", "post": "Химик", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "27", "dateRegistration": "01.01.1981", "fullName": "Добрынин Олег Александрович", "post": "Аналитик", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" },
+    { "id": "28", "dateRegistration": "01.01.1980", "fullName": "Виноградова Валерия Вячеславовна", "post": "Продавец мороженого", "email": "email@email.ru", "password": "********", "tel": "+7 777 *** ** **" }
+  ]
+}

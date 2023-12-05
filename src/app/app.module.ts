@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -24,7 +24,10 @@ import { UserListComponent } from "./components/user-list-component/user-list.co
 import { CreateUserComponent } from "./components/create-user-component/create-user.component";
 
 import { reducer } from "./store/state/app.reducer";
-import {AppEffect} from "./store/state/app.effect";
+import { AppEffect } from "./store/state/app.effect";
+import { MatSortModule } from "@angular/material/sort";
+import { UserSortService } from "./services/user.sort.service";
+import { FilterUserComponent } from "./components/filter-user-component/filter-user.component";
 
 @NgModule({
   declarations: [
@@ -32,29 +35,32 @@ import {AppEffect} from "./store/state/app.effect";
     InfoComponent,
     LoadUserComponent,
     UserListComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    FilterUserComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NoopAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatTableModule,
-    MatCheckboxModule,
-    MatDialogModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    StoreModule.forRoot({'app-store': reducer}),
-    EffectsModule.forRoot([AppEffect]),
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        NoopAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatTableModule,
+        MatCheckboxModule,
+        MatDialogModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatPaginatorModule,
+        StoreModule.forRoot({'app-store': reducer}),
+        EffectsModule.forRoot([AppEffect]),
+        MatSortModule,
+    ],
   providers: [
     MatDatepickerModule,
-    { provide: MAT_DATE_LOCALE, useValue: 'RU' }
+    { provide: MAT_DATE_LOCALE, useValue: 'RU' },
+    UserSortService
   ],
   bootstrap: [AppComponent]
 })

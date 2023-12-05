@@ -1,0 +1,40 @@
+<div class="container container_width-90 container_padding-left-16 container_padding-right-16 container_column container_background container_min-height">
+  <h4>Список экспертов по оценке и руководителей</h4>
+
+  <div>
+    <form class="container" [formGroup]="filterUserForm" (submit)="onSubmitFilter()">
+      <div class="field-container field-margin-right-8">
+        <mat-label>ID</mat-label>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput type="text" formControlName="id">
+        </mat-form-field>
+      </div>
+
+      <div class="field-container field-margin-right-8">
+        <mat-label>ФИО</mat-label>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput type="text" formControlName="fullName">
+        </mat-form-field>
+      </div>
+
+      <div class="field-container field-margin-right-8">
+        <mat-label>Должность</mat-label>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput type="text" formControlName="post">
+        </mat-form-field>
+      </div>
+
+      <div class="field-container field-margin-right-8">
+        <mat-label>Почта(Логин)</mat-label>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input type="email" matInput formControlName="email">
+        </mat-form-field>
+      </div>
+
+      <div class="field-container">
+        <button type="submit"  mat-flat-button color="primary"> Приминить фильтры</button>
+      </div>
+
+    </form>
+  </div>
+</div>

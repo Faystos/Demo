@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 
 import { actionType } from "../type/actionType";
-import {IUser} from "../../types/user.type";
+import { IUser } from "../../types/user.type";
 
 export const fetchUserList = createAction(
   actionType.fetchUserList

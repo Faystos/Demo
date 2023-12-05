@@ -1,7 +1,7 @@
 export interface IHttpResponseUserList {
   users: IUser[];
-
 }
+
 export interface IUser {
   id: string;
   dateRegistration: Date | string;
@@ -10,4 +10,9 @@ export interface IUser {
   email: string;
   password: string;
   tel: string;
+}
+
+export interface SortSetting {
+  active: string;
+  direction: 'asc' | 'desc' | '';
 }

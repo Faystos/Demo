@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import {catchError, map, mergeMap, of} from "rxjs";
+import { catchError, map, mergeMap, of } from "rxjs";
 
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 

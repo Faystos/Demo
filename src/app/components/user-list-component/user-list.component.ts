@@ -1,13 +1,14 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
 
 import { SelectionModel } from "@angular/cdk/collections";
+import { PageEvent } from "@angular/material/paginator";
 import { MatDialog } from "@angular/material/dialog";
 
 import { CreateUserComponent } from "../create-user-component/create-user.component";
 import { IUser } from "../../types/user.type";
 import { AppFacadeService } from "../../store/state/app.facade.service";
-import {Subscription} from "rxjs";
-import {PageEvent} from "@angular/material/paginator";
+import { UserSortService } from "../../services/user.sort.service";
 
 @Component({
   selector: 'user-list',
@@ -21,19 +22,19 @@ export class UserListComponent implements OnInit, OnDestroy {
   userList$ = this.AppFacadeService.userList$;
   userList: IUser[] = [];
   paginationUserList:IUser[] = [];
-
   startIndex = 0
   maxIndex = 5
 
   constructor(
     private AppFacadeService: AppFacadeService,
+    private userSortService: UserSortService,
     public dialog: MatDialog
   ) {}
 
   ngOnInit() {
     this.subUserList$ = this.userList$.subscribe((list) => {
       this.userList = list;
-      this.pagination(this.startIndex, this.maxIndex);
+      this.paginationUserList = this.getPaginationList(this.startIndex, this.maxIndex);
     })
 
     this.AppFacadeService.fetchUserList();
@@ -55,6 +56,14 @@ export class UserListComponent implements OnInit, OnDestroy {
     });
   }
 
+  onFilterUserList(event: IUser[]) {
+    if (!event.length) {
+      this.paginationUserList = this.getPaginationList(this.startIndex, this.maxIndex).map((user) => ({ ...user }));
+      return
+    }
+    this.paginationUserList = event;
+  }
+
   handlePageEvent(evt: PageEvent):void {
     const previousPageIndex = evt.previousPageIndex as number;
     const pageIndex = evt.pageIndex as number;
@@ -69,14 +78,30 @@ export class UserListComponent implements OnInit, OnDestroy {
       this.maxIndex -= evt.pageSize;
     }
 
-    this.pagination(this.startIndex, this.maxIndex);
+    this.paginationUserList = this.getPaginationList(this.startIndex, this.maxIndex);
   }
 
   checkboxLabel(row: IUser): string {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
   }
 
-  private pagination(start: number, end: number) {
-    this.paginationUserList = this.userList.slice(start, end)
+  announceSortChange(event: { active: string; direction: 'asc' | 'desc' | '' }) {
+    const sortItems = this.getPaginationList(this.startIndex, this.maxIndex).map((user) => ({ ...user }));
+
+    if (event.active === 'id') {
+      this.paginationUserList = this.userSortService.sortUserById(event, sortItems);
+    }
+
+    if (event.active === 'dateRegistration') {
+      this.paginationUserList = this.userSortService.sortUserByDate(event, sortItems);
+    }
+
+    if (event.active === 'fullName') {
+      this.paginationUserList = this.userSortService.sortUserByFullName(event, sortItems);
+    }
+  }
+
+  private getPaginationList(start: number, end: number) {
+    return this.userList.slice(start, end)
   }
 }

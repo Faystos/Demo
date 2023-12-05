@@ -1,24 +1,3 @@
-
-.container {
-  width: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-
-  &_right {
-    justify-content: end;
-  }
-
-  &_margin-top-16 {
-    margin-top: 16px;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  .mat-cell:not(:first-child), .mat-header-cell:not(:first-child) {
-    text-align: center;
-  }
+table {
+  width: 100%;
 }
